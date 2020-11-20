@@ -41,6 +41,10 @@ steps:
     cliProjectKey: 'proteccion-project'
     cliProjectName: 'ImageSizeModifier'
     cliSources: '.'
+    extraProperties: |
+     sonar.exclusions=**/obj/**,**/*.dll
+     sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
+     sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/*.trx
  
 - task: CopyFiles@2
   displayName: 'Copy files'
