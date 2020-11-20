@@ -2,6 +2,7 @@ import React from 'react';
 import ImageImporter from './components/ImageImporter';
 
 const ImageSizeModifier = () => {
+  console.log('hello world');
 
   return (
     < >
