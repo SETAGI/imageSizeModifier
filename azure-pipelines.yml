@@ -31,6 +31,16 @@ steps:
     set "REACT_APP_STAGE=$(stage)" && npm run build
   displayName: 'npm build'
   workingDirectory: $(directory)
+  
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'sonarcloud'
+    organization: 'proteccion-project'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'proteccion-project'
+    cliProjectName: 'ImageSizeModifier'
+    cliSources: '.'
  
 - task: CopyFiles@2
   displayName: 'Copy files'
@@ -61,3 +71,9 @@ steps:
     appName: '$(appServiceName)'
     appType: 'webApp'
     package: '$(System.ArtifactsDirectory)/$(Build.BuildId).zip'
+
+- task: SonarCloudAnalyze@1
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
