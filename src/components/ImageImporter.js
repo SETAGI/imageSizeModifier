@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ModifierToA4Size from './ModifierToA4Size';
-import ShowOriginalDimensions from './ShowOriginalDimensions';
+import ShowDimensions from './ShowDimensions';
 
 const ImageImporter = () => {
 
@@ -12,7 +12,7 @@ const ImageImporter = () => {
 
     if (e.target.files.length === 0 || !/\.(jpg|png)$/i.test(data.name)) {
 
-      alert('Ingrese una imagen con el formato: .jpg');
+      console.log('Ingrese una imagen con el formato: .jpg');
 
     } else {
 
@@ -35,7 +35,7 @@ const ImageImporter = () => {
   return (
     <>
       <input type='file' name='file[]' onChange={inputFile} multiple></input>
-      <ShowOriginalDimensions originalSize={originalSize} />
+      <ShowDimensions originalSize={originalSize} />
       <ModifierToA4Size originalSize={originalSize} />
     </>
   );
