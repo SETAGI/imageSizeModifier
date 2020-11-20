@@ -3,6 +3,7 @@ import React from 'react';
 const ShowA4Dimensions = ({ a4Size }) => {
   return (
     <>
+      <h3>Image require dimensions</h3>
       {
         <p>Width: {a4Size.widthFinal} </p>
       }
@@ -16,5 +17,6 @@ const ShowA4Dimensions = ({ a4Size }) => {
     </>
   );
 };
+
 
 export default ShowA4Dimensions;

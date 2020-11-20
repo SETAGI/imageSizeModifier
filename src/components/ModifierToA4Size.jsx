@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { domain } from '../domain/domain';
 import ShowA4Dimensions from './ShowA4Dimensions';
+import ShowDimensions from './ShowDimensions';
 
 const ModifierToA4Size = ({ originalSize }) => {
 
-  const [a4Size, seta4Size] = useState({ widthFinal: 0, heightFinal: 0, orientationFinal: 'without data' });
+  const [a4Size, seta4Size] = useState({ widthFinal: '--', heightFinal: '--', orientationFinal: '' });
   const a4SizeSheet = { maxWidth: 796, maxHeight: 1123 };
 
   const sizeAndOrientationValidation = () => {
@@ -15,6 +16,7 @@ const ModifierToA4Size = ({ originalSize }) => {
   return (
     <>
       <button onClick={sizeAndOrientationValidation} >Validation Size</button>
+      <ShowDimensions originalSize={originalSize} />
       <ShowA4Dimensions a4Size={a4Size} />
     </>
   );
