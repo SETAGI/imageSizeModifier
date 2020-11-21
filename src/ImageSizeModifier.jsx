@@ -38,19 +38,47 @@ const ImageSizeModifier = () => {
     setBack(false);
   };
 
+  const openFiles = () => {
+    document.querySelector('.input').click();
+  };
+
+
   return (
     < >
-      <h1>Resize images for A4 size sheets</h1>
+      <header className='header'>
+        <div className="header__text-box">
+          <h1 className="text-header-main">
+            <span className="text-header-main--primary">Image converter</span>
+            <span className="text-header-main--secondary">The best place to modify the size of your images</span>
+          </h1>
+        </div>
+      </header>
+      <div className="utility-center-text mb-5">
+        <h2 className="text-secondary">
+          Please select the images
+					</h2>
+      </div>
+      <div className="flecha-down mb-5"></div>
 
-      {
-        showInput && <input type='file' name='file[]' onChange={inputFile} multiple></input>
+      {showInput && (
+        <div className='buttonContainer mt-5'>
+          <button onClick={openFiles} className='pointer btn btn--white btn--animated'><i className="fas fa-camera-retro"></i></button>
+        </div>)
       }
+
+      <input type='file' name='file[]' onChange={inputFile} multiple className='input'></input>
+
       {
         showResults && <ModifierToA4Size originalSize={originalSize} />
       }
+
       {
         back && <button onClick={initialState}>return</button>
       }
+      <footer className='footer mt-10 '>
+        <p>&copy; Created by Sebastian Tamayo Giraldo - 2020</p>
+      </footer>
+
     </>
   );
 };

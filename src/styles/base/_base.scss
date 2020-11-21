@@ -1,0 +1,53 @@
+* {
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0px;
+}
+
+html,
+body {
+	font-size: 10px;
+	background-color: #011f2a;
+}
+
+.mt-1 {
+	margin-top: 1rem;
+}
+
+.mt-5 {
+	margin-top: 2.7rem;
+}
+
+.mt-10 {
+	margin-top: 10rem;
+}
+
+.mb-1 {
+	margin-bottom: 1rem;
+}
+
+.mb-5 {
+	margin-bottom: 2.7rem;
+}
+
+.mb-10 {
+	margin-bottom: 10rem;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.utility-center-text {
+	text-align: center;
+}
+
+.flecha-down {
+	width: 0px;
+	height: 0px;
+	margin: 0 auto;
+	border-left: 15px solid transparent; /* izquierda flecha */
+	border-right: 15px solid transparent; /* derecha flecha */
+	border-top: 15px solid white; /* base flecha y color*/
+	font-size: 0px;
+	line-height: 0px;
+}
