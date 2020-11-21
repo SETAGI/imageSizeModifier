@@ -5,11 +5,10 @@
 
 	&--primary {
 		display: block;
-		font-size: 6rem;
-
+		font-size: 4rem;
 		font-weight: 400;
-		letter-spacing: 4rem;
-		padding-left: 5rem;
+		letter-spacing: 2.5rem;
+		padding-left: 4rem;
 		animation: mov-left-in 2s;
 	}
 
@@ -17,19 +16,17 @@
 		display: block;
 		font-size: 2rem;
 		font-weight: 700;
-		letter-spacing: 1rem;
-		padding-left: 1.5rem;
+		letter-spacing: 0.5rem;
+		padding-left: 2rem;
 		animation: mov-right-in 2s;
 	}
 }
 
 .text-secondary {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 700;
 	display: inline-block;
 	background-image: linear-gradient(to right bottom, rgba(#ee3efe, 0.8), rgba(#cdcefd, 0.8));
-	// background-image: linear-gradient(to right, $primary, $dark-grey);
-	/* next utility only works with -webkit prefix, this help us to create new forms for painting the text*/
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
@@ -38,6 +35,6 @@
 
 	&:hover {
 		transform: scale(1.05);
-		text-shadow: 0rem 1rem 0.5rem rgba(black, 0.1);
+		text-shadow: 0rem 1rem 0.5rem rgba($color-black, 0.1);
 	}
 }

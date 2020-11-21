@@ -4,12 +4,8 @@ const ShowDimensions = ({ originalSize }) => {
   return (
     <>
       <h3>Image  dimensions</h3>
-      {
-        <p>Width: {originalSize.width} </p>
-      }
-      {
-        <p>Heigth: {originalSize.height} </p>
-      }
+      <p>Width: {originalSize.width} </p>
+      <p>Heigth: {originalSize.height} </p>
     </>
   );
 };

@@ -15,7 +15,9 @@ const ModifierToA4Size = ({ originalSize }) => {
 
   return (
     <>
-      <button onClick={sizeAndOrientationValidation} >Validation Size</button>
+      <div className='to-A4-button-container'>
+        <button onClick={sizeAndOrientationValidation} className='btn pointer' >To A4</button>
+      </div>
       <ShowDimensions originalSize={originalSize} />
       <ShowA4Dimensions a4Size={a4Size} />
     </>
