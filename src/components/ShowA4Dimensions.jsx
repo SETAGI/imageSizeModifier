@@ -7,7 +7,7 @@ const ShowA4Dimensions = ({ a4Size }) => {
       <div>
         <p>Width = {a4Size.widthFinal}px </p>
         <p>Heigth = {a4Size.heightFinal}px </p>
-        <p>A4 page Orientation = {a4Size.orientationFinal} </p>
+        <p>A4 page orientation = {a4Size.orientationFinal} </p>
       </div>
     </div>
   );
