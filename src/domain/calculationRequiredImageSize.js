@@ -72,5 +72,5 @@ export function calculationRequiredImageSize({ maxWidth, maxHeight }, { width, h
       heightFinal: Math.round(height / factor),
       orientationFinal: orientation
     });
-  };
+  }
 }
