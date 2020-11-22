@@ -4,33 +4,20 @@
 }
 
 .btn {
-	width: 70px;
-	height: 30px;
+	width: 25rem;
+	height: 3rem;
+	font-size: 1.2rem;
+	text-transform: uppercase;
 	background-color: #2e32fb;
-	// border: dashed $color-white 2px;
-	// font-size: 70px;
 	color: $color-white;
 	position: relative;
 
-	&::after {
-		content: '';
-		display: inline-block;
-		height: 100%;
-		width: 100%;
-		border-radius: 1rem;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -1;
-		transition: all 0.3s;
-	}
-
 	&--import {
-		width: 150px;
-		height: 200px;
+		width: 7rem;
+		height: 12rem;
 		background-color: #2e32fb;
 		border: dashed $color-white 2px;
-		font-size: 70px;
+		font-size: 3.5rem;
 		color: $color-white;
 		background-image: linear-gradient(to right bottom, rgba(#ee3efe, 0.8), rgba(#2e32fb, 0.8));
 		&::after {
@@ -50,5 +37,30 @@
 	&--animated {
 		animation: mov-bottom-in 2s 0.75s;
 		animation-fill-mode: backwards;
+	}
+}
+
+/*----------------------Tablet portrait section----------------------*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+	.btn {
+		font-size: 1rem;
+
+		&--import {
+			font-size: 2.5rem;
+		}
+	}
+}
+
+/*------------------------Mobile section----------------------*/
+@media screen and (max-width: 599px) {
+	.btn {
+		font-size: 0.9rem;
+		width: 100%;
+
+		&--import {
+			width: 5rem;
+			height: 8rem;
+			font-size: 2rem;
+		}
 	}
 }

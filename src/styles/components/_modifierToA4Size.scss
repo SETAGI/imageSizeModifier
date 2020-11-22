@@ -2,3 +2,43 @@
 	display: flex;
 	justify-content: center;
 }
+.response-container {
+	display: flex;
+	font-size: 1.2rem;
+	flex-direction: column;
+	align-items: center;
+}
+
+.dimensions-container {
+	display: flex;
+	justify-content: center;
+	border: 1px dashed white;
+	padding: 0.5rem;
+}
+
+.result-data-container {
+	&:not(:last-child) {
+		margin-right: 1rem;
+	}
+}
+
+/*----------------------Tablet landscape section----------------------*/
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+	.response-container {
+		font-size: 1.2rem;
+	}
+}
+
+/*----------------------Tablet portrait section----------------------*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+	.response-container {
+		font-size: 1rem;
+	}
+}
+
+/*------------------------Mobile section----------------------*/
+@media screen and (max-width: 599px) {
+	.response-container {
+		font-size: 0.8rem;
+	}
+}
