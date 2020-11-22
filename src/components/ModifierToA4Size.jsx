@@ -27,9 +27,7 @@ const ModifierToA4Size = ({ originalData }) => {
           </div>
         )
       }
-      {/* <div className='to-A4-button-container mb-5 mt-5'>
-        <button onClick={sizeAndOrientationValidation} className='btn pointer' >Press to resize to A4</button>
-      </div> */}
+
       {
         baseSizeSelected && (
           <div className='response-container mb-5 mt-5'>

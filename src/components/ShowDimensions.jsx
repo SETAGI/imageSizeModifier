@@ -5,8 +5,8 @@ const ShowDimensions = ({ originalSize }) => {
     <div className='result-data-container'>
       <h3 className='mb-1'>Original dimensions</h3>
       <div>
-        <p>Width = {originalSize.width} </p>
-        <p>Heigth = {originalSize.height} </p>
+        <p>Width = {originalSize.width}px </p>
+        <p>Heigth = {originalSize.height}px </p>
       </div>
     </div>
   );

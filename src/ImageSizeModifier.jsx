@@ -13,13 +13,12 @@ const ImageSizeModifier = () => {
 
     let data = e.target.files[0];
 
-    if (e.target.files.length === 0 || !/\.(jpg|png)$/i.test(data.name)) {
+    if (e.target.files.length === 0 || !/\.(jpg|png|jpeg)$/i.test(data.name)) {
       setNotAnImage(true);
     } else {
 
-
       let dataName = data.name;
-      let name = (dataName).slice(0, (dataName.length - 4)); //modificar
+      let name = (dataName).slice(0, (dataName.length - 4));
 
       let img = new Image();
 
