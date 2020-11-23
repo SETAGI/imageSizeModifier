@@ -2,19 +2,18 @@
 export function calculationRequiredImageSize({ maxWidth, maxHeight }, { width, height }) {
 
   const BASE_AREA = maxWidth * maxHeight;
-  const RATIO_IMAGE = width / height;
   const VERTICAL_ORIENTATION = 'Vertical';
   const HORIZONTAL_ORIENTATION = 'Horizontal';
 
-  if (RATIO_IMAGE === 1) {
+  if (width === height) {
     return calculateForSquare();
   }
 
-  if (RATIO_IMAGE > 1) {
+  if (width > height) {
     return calculareForHorizontalRectangle();
   }
 
-  if (RATIO_IMAGE < 1) {
+  if (width < height) {
     return calculareForVerticalRectangle();
   }
 

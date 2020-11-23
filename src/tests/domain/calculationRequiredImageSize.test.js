@@ -3,6 +3,7 @@ import { calculationRequiredImageSize } from '../../domain/calculationRequiredIm
 describe('Domain Tests', () => {
 
   test('It should return a square resized', () => {
+
     const sizeRequiredTest = {
       widthFinal: 796,
       heightFinal: 796,

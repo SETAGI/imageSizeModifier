@@ -3,7 +3,7 @@ import React from 'react';
 const ShowA4Dimensions = ({ a4Size }) => {
   return (
     <div className='result-data-container'>
-      <h3 className='mb-1'>Required Dimensions</h3>
+      <h3 className='mb-1'>Required dimensions</h3>
       <div>
         <p>Width = {a4Size.widthFinal}px </p>
         <p>Heigth = {a4Size.heightFinal}px </p>
